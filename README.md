@@ -34,7 +34,7 @@ services:
             - /var/run/docker.sock:/var/run/docker.sock
             - /etc/localtime:/etc/localtime:ro
         restart: always
-        command:  --interval 21600 --stop-timeout 300s --debug
+        command:  --interval 21600 --stop-timeout 300s
 
 ```
 Make sure to change the script so it matches your configuration (volume, environment etc)
