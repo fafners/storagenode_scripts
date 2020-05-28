@@ -26,6 +26,15 @@ services:
               source: /your_volume/storage
               target: /app/config
         restart: unless-stopped
+    
+    watchtower:
+        image: storjlabs/watchtower
+        container_name: watchtower
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
+            - /etc/localtime:/etc/localtime:ro
+        restart: always
+        command:  --interval 21600 --stop-timeout 300s --debug
 
 ```
 Make sure to change the script so it matches your configuration (volume, environment etc)
