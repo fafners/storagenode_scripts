@@ -28,6 +28,8 @@ services:
         restart: unless-stopped
 
 ```
+Make sure to change the script so it matches your configuration (volume, environment etc)
+
 
 
 
