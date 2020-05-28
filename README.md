@@ -1,1 +1,33 @@
 # storagenode_scripts
+Some of my scripts for creating or maintaining storagenode.
+
+I'm found of docker-compose yml files not only for simplicty but I also found it useful
+for documenting the container setup.
+
+```
+version: "3.2"
+services:
+    storagenode:
+        image: storjlabs/storagenode:beta
+        container_name: storagenode
+        ports:
+            - 28967:28967
+            - 14002:14002
+        environment:
+            - "WALLET=0x123456789"
+            - "EMAIL=your@email.com"
+            - "ADDRESS=DDNS:28967"
+            - "STORAGE=5TB"     
+        volumes:
+            - type: bind
+              source: /your_volume/identity/synonode
+              target: /app/identity
+            - type: bind
+              source: /your_volume/storage
+              target: /app/config
+        restart: unless-stopped
+
+```
+
+
+
