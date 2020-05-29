@@ -20,7 +20,7 @@ services:
             - "STORAGE=5TB"     
         volumes:
             - type: bind
-              source: /your_volume/identity/synonode
+              source: /your_volume/identity/storagenode
               target: /app/identity
             - type: bind
               source: /your_volume/storage
