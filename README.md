@@ -8,7 +8,7 @@ for documenting the container setup.
 version: "3.2"
 services:
     storagenode:
-        image: storjlabs/storagenode:beta
+        image: storjlabs/storagenode:latest
         container_name: storagenode
         ports:
             - 28967:28967
