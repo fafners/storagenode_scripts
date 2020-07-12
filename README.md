@@ -46,7 +46,7 @@ storage_exporter:
         image: anclrii/storj-exporter:latest
         container_name: storage_exporter
         ports:
-            - 9652:9651
+            - 9651:9651
         restart: unless-stopped
         links:
             - storagenode
