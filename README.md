@@ -39,7 +39,7 @@ services:
 ```
 Make sure to change the script so it matches your configuration (volume, environment etc)
 
-If you want to set up anclrii/storj-exporter add the following to docker-compose.yml
+If you want to set up [Storj-Exporter](https://github.com/anclrii/Storj-Exporter/)  add the following to docker-compose.yml
 
 ```
 storage_exporter:
